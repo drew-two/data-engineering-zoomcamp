@@ -26,10 +26,13 @@ def main(params):
     else:
         csv_name = 'output.csv'
 
+    # download file
     os.system(f"wget {url} -O {csv_name}")
 
+    # open connection
     engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
 
+    # open the file we just downloaded
     df_iter = pd.read_csv(csv_name, iterator=True, chunksize=100000)
 
     df = next(df_iter)
