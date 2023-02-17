@@ -18,3 +18,4 @@ serving_dir
 credentials.md
 week_1_basics_n_setup/2_docker_sql/yellow_tripdata_2021-01.csv
 week_1_basics_n_setup/2_docker_sql/taxi+_zone_lookup.csv
+week_2_workflow_orchestration/data/
