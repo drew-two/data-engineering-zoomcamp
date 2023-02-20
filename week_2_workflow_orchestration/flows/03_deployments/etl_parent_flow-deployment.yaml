@@ -1,15 +1,35 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'etl-parent-flow'
 ###
-name: Parameterized ETL
+name: Parameterized ETL CSV
 description: null
-version: cbce978d1b32d9ec9c3c39b57c03a914
+version: ae344ebcb036cd035d44f686243b7dd9
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 tags: []
-parameters: { "color": "yellow", "months": [1, 2, 3], "year": 2021}
+parameters:
+  months:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  year: 2019
 schedule: null
 infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -18,17 +38,14 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
+  _block_document_id: 888d8fc9-342e-4d73-848f-647dbc14c29b
+  _block_document_name: anonymous-a7306b6d-39b7-4b4c-9fd7-304b0ec01344
+  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: etl-parent-flow
-manifest_path: null
 storage: null
-path: /mnt/e/andre/Documents/data-engineering-zoomcamp/week_2_workflow_orchestration
-entrypoint: parameterized_flow.py:etl_parent_flow
+path: /mnt/e/andre/Documents/data-engineering-zoomcamp/week_2_workflow_orchestration/flows/03_deployments
+entrypoint: parameterized_flow_csv.py:etl_parent_flow
 parameter_openapi_schema:
   title: Parameters
   type: object

@@ -22,6 +22,8 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
     df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
+    df.passenger_count = df.passenger_count.astype(int)
+
     print(df.head(2))
     print(f"columns: {df.dtypes}")
     print(f"rows: {len(df)}")
@@ -61,7 +63,7 @@ def etl_web_to_gcs() -> None:
     df = fetch(dataset_url)
     df_clean = clean(df)
     path = write_local(df_clean, color, dataset_file)
-    write_gcs(path)
+    # write_gcs(path)
 
 if __name__ == '__main__':
     etl_web_to_gcs()
