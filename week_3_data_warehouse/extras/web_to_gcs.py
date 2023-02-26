@@ -41,10 +41,11 @@ def web_to_gcs(year, service):
         month = month[-2:]
 
         # csv file_name 
-        file_name = service + '_tripdata_' + year + '-' + month + '.csv.gz'
+        file_name = service + '/' + service + '_tripdata_' + year + '-' + month + '.csv.gz'
 
         # download it using requests via a pandas df
         request_url = init_url + file_name
+        print(f"Request URL: {request_url}")
         r = requests.get(request_url)
         pd.DataFrame(io.StringIO(r.text)).to_csv(file_name)
         print(f"Local: {file_name}")
