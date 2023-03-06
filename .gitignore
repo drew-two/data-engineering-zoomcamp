@@ -14,8 +14,13 @@
 serving_dir
 *.csv
 .ipynb_checkpoints/
-!week_6_stream_processing/avro_example/data/rides.csv
 credentials.md
+!week_6_stream_processing/avro_example/data/rides.csv
+week_5_batch_processing/notebooks/data/pq/
+week_5_batch_processing/notebooks/data/raw/
+week_5_batch_processing/notebooks/data/test/revenue/
+week_5_batch_processing/notebooks/fhvhv/
+week_5_batch_processing/notebooks/spark-warehouse/
 week_1_basics_n_setup/2_docker_sql/yellow_tripdata_2021-01.csv
 week_1_basics_n_setup/2_docker_sql/taxi+_zone_lookup.csv
 week_2_workflow_orchestration/data/
