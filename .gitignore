@@ -13,6 +13,7 @@
 **/ny_taxi_postgres_data/*
 serving_dir
 *.csv
+*.csv.gz
 .ipynb_checkpoints/
 credentials.md
 !week_6_stream_processing/avro_example/data/rides.csv
@@ -24,3 +25,4 @@ week_5_batch_processing/notebooks/spark-warehouse/
 week_1_basics_n_setup/2_docker_sql/yellow_tripdata_2021-01.csv
 week_1_basics_n_setup/2_docker_sql/taxi+_zone_lookup.csv
 week_2_workflow_orchestration/data/
+cohorts/2023/week_5_batch_processing/fhvhv/
